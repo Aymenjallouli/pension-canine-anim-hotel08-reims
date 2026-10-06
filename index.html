@@ -1,0 +1,975 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pension canine anim'hotel08, pension pour chiens à Charleville-Mézières</title>
+<meta name="description" content="Pension pour chiens et chats route d’Aiglemont à Charleville-Mézières : grand terrain, logements chauffés, accueil sur rendez-vous. 5/5 sur 81 avis Google.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Pension canine anim'hotel08, pension pour chiens à Charleville-Mézières">
+<meta property="og:description" content="Un grand terrain, des logements chauffés pour l’hiver et des photos pendant votre absence. Chez Loïc, route d’Aiglemont. 5/5 sur 81 avis Google.">
+<meta name="theme-color" content="#1E3A2B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231E3A2B'/%3E%3Cpath d='M17 54V31a15 15 0 0 1 30 0v23z' fill='%23E0682C'/%3E%3Cpath d='M26 54V38a6 6 0 0 1 12 0v16z' fill='%231E3A2B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,500&family=Figtree:wght@400;600&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Pension canine anim'hotel08",
+  "description": "Pension canine et féline à Charleville-Mézières : pension pour chiens et chats, garde de chien pendant les vacances.",
+  "image": "assets/photos/photo-01.jpg",
+  "telephone": "+33671478699",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "17 Rte d'Aiglemont",
+    "postalCode": "08000",
+    "addressLocality": "Charleville-Mézières",
+    "addressCountry": "FR"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 49.769062, "longitude": 4.745807 },
+  "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJxSlikjsN6kcRbVH4ZlEILJU",
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  }],
+  "sameAs": ["https://www.facebook.com/profile.php?id=61588018622371"]
+}
+</script>
+<style>
+/* ──────────────────────────────────────────────────────────────────────────
+   DESIGN DECISIONS: anim'hotel08
+   Palette   Taken from the photos: the deep conifer green behind the weimaraner (brand),
+             sunlit oat/straw ground (bg), the orange ball and beagle collar (accent, the
+             one loud colour, used for the stars, the arch outline and the contact band), plus a
+             sage tint from the grass. Warm and outdoorsy, nothing clinical.
+   Type      Fraunces (soft, slightly old-style serif with an italic) for display: friendly
+             but grown-up. Figtree for body: round, very legible on phones. 4 weights total.
+   Hero      Split editorial. Big typographic promise on the left; on the right the best photo
+             in an arch frame (a doorway, the "hôtel" idea) with an orange offset outline and
+             a round inset of the two bouledogues. Slow Ken Burns on the arch.
+   Rhythm    oat hero → deep-green proof band with an oversized "5,0" → zig-zag feature rows
+             → white services list → masonry gallery → sage "how to book" → access/hours/map
+             → orange contact band → dark-green footer. Signature details: live open badge,
+             swipeable review rail, gallery lightbox, scroll reveals, count-up.
+   ────────────────────────────────────────────────────────────────────────── */
+:root{
+  --bg:#F5F0E6; --surface:#FFFCF6; --ink:#18201B; --ink-soft:#4C574F;
+  --brand:#1E3A2B; --brand-ink:#F5F0E6; --accent:#E0682C; --line:#DDD3C2;
+  --accent-deep:#AE4417; --peach:#F2B880; --tint:#E3E8D9; --forest:#14261C;
+
+  --font-display:"Fraunces", Georgia, "Times New Roman", serif;
+  --font-body:"Figtree", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --step--1:clamp(.875rem, .85rem + .1vw, .9375rem);
+  --step-0:clamp(1.0625rem, 1.03rem + .15vw, 1.125rem);
+  --step-1:clamp(1.1875rem, 1.12rem + .35vw, 1.4375rem);
+  --step-2:clamp(1.4375rem, 1.3rem + .6vw, 1.875rem);
+  --step-3:clamp(1.75rem, 1.5rem + 1.2vw, 2.625rem);
+  --step-4:clamp(2.125rem, 1.7rem + 2.1vw, 3.5rem);
+  --step-5:clamp(2.625rem, 1.85rem + 3.7vw, 5rem);
+
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-5:24px;
+  --space-6:32px; --space-7:48px; --space-8:64px; --space-9:96px;
+  --section:clamp(56px, 10vw, 128px);
+
+  --r-sm:12px; --r-md:20px; --r-lg:32px; --r-pill:999px;
+  --shadow-1:0 1px 2px rgba(24,32,27,.06), 0 2px 8px rgba(24,32,27,.05);
+  --shadow-2:0 2px 4px rgba(24,32,27,.05), 0 12px 28px -8px rgba(24,32,27,.18);
+  --shadow-3:0 4px 10px rgba(24,32,27,.06), 0 30px 60px -18px rgba(24,32,27,.35);
+  --ease:cubic-bezier(.2,.7,.2,1);
+
+  --container:1200px; --gutter:clamp(16px, 5vw, 40px); --header:64px;
+}
+@media (min-width:960px){ :root{ --header:76px; } }
+
+*,*::before,*::after{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; scroll-padding-top:calc(var(--header) + 12px); }
+html.is-locked{ overflow:hidden; }
+body{
+  margin:0; background:var(--bg); color:var(--ink); font-family:var(--font-body);
+  font-size:var(--step-0); line-height:1.6; -webkit-font-smoothing:antialiased;
+  padding-bottom:calc(72px + env(safe-area-inset-bottom));
+}
+@media (min-width:768px){ body{ padding-bottom:0; } }
+img{ display:block; max-width:100%; height:auto; }
+a{ color:inherit; }
+h1,h2,h3{ font-family:var(--font-display); font-weight:600; line-height:1.08; letter-spacing:-.02em; margin:0; text-wrap:balance; }
+p{ margin:0; text-wrap:pretty; }
+ul,ol{ margin:0; padding:0; list-style:none; }
+blockquote,figure{ margin:0; }
+:focus-visible{ outline:3px solid var(--accent); outline-offset:3px; border-radius:6px; }
+.visually-hidden{ position:absolute!important; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+.skip{ position:absolute; left:var(--space-4); top:-100px; z-index:100; background:var(--ink); color:var(--bg); padding:12px 18px; border-radius:var(--r-sm); font-weight:600; text-decoration:none; }
+.skip:focus{ top:var(--space-3); }
+
+.container{ width:min(100% - 2 * var(--gutter), var(--container)); margin-inline:auto; }
+.section{ padding-block:var(--section); }
+section[id]{ scroll-margin-top:var(--header); }
+
+.i{ width:20px; height:20px; flex:none; fill:none; stroke:currentColor; stroke-width:1.75; stroke-linecap:round; stroke-linejoin:round; }
+.i--fill{ fill:currentColor; stroke:none; }
+
+.eyebrow{ display:inline-flex; align-items:center; gap:10px; font-size:var(--step--1); font-weight:600; letter-spacing:.09em; text-transform:uppercase; color:var(--accent-deep); }
+.eyebrow::before{ content:""; width:22px; height:2px; background:currentColor; }
+.eyebrow--hero{ flex-wrap:wrap; gap:2px 6px; text-transform:none; letter-spacing:0; font-size:.9375rem; }
+.eyebrow--hero::before{ margin-right:4px; }
+.eyebrow--hero span{ white-space:nowrap; }
+.section-head{ max-width:44rem; }
+.section-head h2{ font-size:var(--step-4); margin-top:var(--space-3); }
+.section-head p{ margin-top:var(--space-4); color:var(--ink-soft); max-width:60ch; }
+
+/* Buttons */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:10px; min-height:52px;
+  padding:0 22px; border-radius:var(--r-pill); font-weight:600; font-size:1rem; text-decoration:none;
+  border:1.5px solid transparent; transition:transform .3s var(--ease); white-space:nowrap;
+}
+.btn:hover{ transform:translateY(-2px); }
+.btn:active{ transform:translateY(0); }
+.btn--primary{ background:var(--brand); color:var(--brand-ink); box-shadow:var(--shadow-2); }
+.btn--primary:hover{ background:#264A37; }
+.btn--ghost{ border-color:currentColor; color:var(--ink); }
+.btn--ghost:hover{ background:rgba(24,32,27,.05); }
+.btn--ink{ background:var(--ink); color:var(--bg); }
+.btn--ink:hover{ background:#2A342D; }
+
+/* Header */
+.header{ position:sticky; top:0; z-index:50; background:var(--bg); border-bottom:1px solid transparent; }
+.header.is-scrolled{ border-bottom-color:var(--line); box-shadow:0 6px 20px -16px rgba(24,32,27,.4); }
+.header__in{ display:flex; align-items:center; gap:var(--space-4); height:var(--header); }
+.brand{ display:inline-flex; align-items:center; gap:10px; min-height:44px; text-decoration:none; color:var(--ink); margin-right:auto; }
+.brand__mark{ width:28px; height:34px; flex:none; }
+.brand__name{ font-family:var(--font-display); font-weight:600; font-size:1.375rem; letter-spacing:-.025em; line-height:1; }
+.brand__num{ display:inline-block; margin-left:4px; padding:3px 6px 2px; border-radius:6px; background:var(--accent); color:var(--ink); font-family:var(--font-body); font-size:.75rem; font-weight:600; letter-spacing:.04em; vertical-align:4px; }
+.header__cta{ display:none; min-height:44px; padding:0 18px; }
+@media (min-width:640px){ .header__cta{ display:inline-flex; } }
+.menu-btn{
+  width:48px; height:48px; display:grid; place-items:center; border:1.5px solid var(--line); border-radius:50%;
+  background:var(--surface); color:var(--ink); cursor:pointer;
+}
+.menu-btn .bars{ position:relative; width:18px; height:12px; }
+.menu-btn .bars span{ position:absolute; left:0; right:0; height:2px; border-radius:2px; background:currentColor; transition:transform .3s var(--ease), opacity .2s var(--ease); }
+.menu-btn .bars span:nth-child(1){ top:0; } .menu-btn .bars span:nth-child(2){ top:5px; } .menu-btn .bars span:nth-child(3){ top:10px; }
+.menu-btn[aria-expanded="true"] .bars span:nth-child(1){ transform:translateY(5px) rotate(45deg); }
+.menu-btn[aria-expanded="true"] .bars span:nth-child(2){ opacity:0; }
+.menu-btn[aria-expanded="true"] .bars span:nth-child(3){ transform:translateY(-5px) rotate(-45deg); }
+
+.nav{
+  position:fixed; inset:var(--header) 0 0 0; z-index:49; background:var(--bg); padding:var(--space-5) var(--gutter) var(--space-7);
+  overflow-y:auto; opacity:0; visibility:hidden; transform:translateY(-10px);
+  transition:opacity .3s var(--ease), transform .3s var(--ease), visibility 0s linear .3s;
+}
+.nav.is-open{ opacity:1; visibility:visible; transform:none; transition:opacity .3s var(--ease), transform .3s var(--ease); }
+.nav ul a{ display:flex; align-items:center; justify-content:space-between; min-height:60px; border-bottom:1px solid var(--line); font-family:var(--font-display); font-size:var(--step-3); text-decoration:none; color:var(--ink); }
+.nav ul a .i{ color:var(--accent-deep); }
+.nav__foot{ margin-top:var(--space-6); display:grid; gap:var(--space-3); }
+.nav__foot .btn{ width:100%; }
+@media (min-width:960px){
+  .menu-btn{ display:none; }
+  .nav{ position:static; opacity:1; visibility:visible; transform:none; padding:0; background:none; overflow:visible; transition:none; }
+  .nav ul{ display:flex; gap:clamp(16px, 2.2vw, 30px); }
+  .nav ul a{ min-height:44px; border:0; font-family:var(--font-body); font-size:1rem; font-weight:600; color:var(--ink-soft); }
+  .nav ul a:hover{ color:var(--ink); }
+  .nav ul a .i, .nav__foot{ display:none; }
+}
+
+/* Hero */
+.hero{ padding-block:var(--space-5) var(--section); overflow:clip; }
+.hero__grid{ display:grid; gap:var(--space-7); }
+.hero h1{ font-size:var(--step-5); line-height:1.02; letter-spacing:-.035em; margin-top:var(--space-4); max-width:13ch; }
+.hero h1 em{ font-style:italic; font-weight:500; color:var(--accent-deep); position:relative; white-space:nowrap; }
+.hero h1 em svg{ position:absolute; left:-2%; bottom:-.16em; width:104%; height:.32em; overflow:visible; }
+.hero h1 em path{ fill:none; stroke:var(--accent); stroke-width:3.5; stroke-linecap:round; vector-effect:non-scaling-stroke; }
+.lead{ font-size:var(--step-1); line-height:1.5; color:var(--ink-soft); margin-top:var(--space-5); max-width:36ch; }
+.hero__proof{ display:flex; flex-wrap:wrap; align-items:center; gap:10px 14px; margin-top:var(--space-5); }
+.chip{
+  display:inline-flex; align-items:center; gap:10px; min-height:44px; padding:6px 16px 6px 12px; border-radius:var(--r-pill);
+  background:var(--surface); border:1px solid var(--line); box-shadow:var(--shadow-1); text-decoration:none; color:var(--ink); font-weight:600;
+  transition:transform .3s var(--ease);
+}
+.chip:hover{ transform:translateY(-2px); }
+.chip__stars{ display:inline-flex; gap:1px; color:var(--accent); }
+.chip__stars .i{ width:15px; height:15px; }
+.chip span.sep{ color:var(--line); }
+.hero__cta{ display:flex; gap:var(--space-3); margin-top:var(--space-5); }
+.hero__cta .btn--primary{ flex:1 1 auto; }
+.hero__cta .btn--ghost{ flex:0 1 auto; }
+.hero__cta .long{ display:none; }
+@media (min-width:480px){ .hero__cta .btn--primary{ flex:0 1 auto; } .hero__cta .long{ display:inline; } .hero__cta .short{ display:none; } }
+
+.badge{ display:inline-flex; align-items:center; gap:8px; font-size:var(--step--1); font-weight:600; color:#1D5A35; }
+.badge::before{ content:""; width:9px; height:9px; border-radius:50%; background:#2F8A4E; box-shadow:0 0 0 4px rgba(47,138,78,.16); animation:pulse 2.4s var(--ease) infinite; }
+.badge.is-closed{ color:var(--accent-deep); }
+.badge.is-closed::before{ background:var(--accent-deep); box-shadow:0 0 0 4px rgba(174,68,23,.14); animation:none; }
+.badge small{ font-size:inherit; font-weight:400; color:var(--ink-soft); }
+@keyframes pulse{ 50%{ opacity:.45; } }
+
+.hero__media{ position:relative; width:100%; max-width:460px; margin-inline:auto; }
+.hero__media::before{
+  content:""; position:absolute; inset:0; border:2px solid var(--accent);
+  border-radius:50% 50% var(--r-md) var(--r-md) / 40% 40% var(--r-md) var(--r-md); transform:translate(12px, -12px);
+}
+.arch{ position:relative; aspect-ratio:4/5; border-radius:50% 50% var(--r-md) var(--r-md) / 40% 40% var(--r-md) var(--r-md); overflow:hidden; box-shadow:var(--shadow-3); background:var(--brand); }
+.arch img{ width:100%; height:100%; object-fit:cover; object-position:55% 45%; animation:kenburns 26s var(--ease) infinite alternate; transform-origin:60% 40%; }
+@keyframes kenburns{ from{ transform:scale(1.02); } to{ transform:scale(1.12); } }
+.hero__inset{
+  position:absolute; left:-2%; bottom:-6%; width:40%; aspect-ratio:1; border-radius:50%; overflow:hidden;
+  border:6px solid var(--bg); box-shadow:var(--shadow-2); background:var(--line);
+}
+.hero__inset img{ width:100%; height:100%; object-fit:cover; object-position:50% 45%; }
+.hero__tag{
+  position:absolute; right:-2%; bottom:14%; display:inline-flex; align-items:center; gap:8px; padding:10px 14px;
+  background:var(--surface); border-radius:var(--r-pill); box-shadow:var(--shadow-2); font-size:var(--step--1); font-weight:600;
+}
+.hero__tag .i{ width:18px; height:18px; color:var(--accent-deep); }
+@media (min-width:960px){
+  .hero{ padding-top:var(--space-7); }
+  .hero__grid{ grid-template-columns:1.12fr .88fr; align-items:center; gap:var(--space-8); }
+  .hero__media{ margin-right:12px; justify-self:end; }
+}
+
+/* Proof */
+.proof{ background:var(--brand); color:var(--brand-ink); padding-block:var(--section); overflow:clip; }
+.proof .eyebrow{ color:var(--peach); }
+.proof__grid{ display:grid; gap:var(--space-7); }
+.score{ display:grid; gap:var(--space-3); align-content:start; }
+.score__num{ font-family:var(--font-display); font-weight:600; font-size:clamp(6.5rem, 3.5rem + 13vw, 13.5rem); line-height:.82; letter-spacing:-.06em; margin-top:var(--space-4); }
+.score__num sup{ font-size:.22em; letter-spacing:0; vertical-align:top; position:relative; top:.35em; margin-left:.12em; color:var(--peach); font-weight:600; }
+.score__stars{ display:flex; gap:4px; color:var(--accent); margin-top:var(--space-5); }
+.score__stars .i{ width:26px; height:26px; }
+.score__count{ font-size:var(--step-1); }
+.score__count strong{ font-variant-numeric:tabular-nums; }
+.link-arrow{ display:inline-flex; align-items:center; gap:8px; min-height:44px; font-weight:600; color:var(--peach); text-decoration:underline; text-underline-offset:5px; text-decoration-thickness:1.5px; }
+.link-arrow .i{ transition:transform .3s var(--ease); }
+.link-arrow:hover .i{ transform:translate(2px,-2px); }
+.proof h2{ font-size:var(--step-4); font-style:italic; font-weight:500; }
+.proof__intro{ margin-top:var(--space-3); color:rgba(245,240,230,.82); max-width:46ch; }
+.pull{ margin-top:var(--space-6); padding-top:var(--space-6); border-top:1px solid rgba(245,240,230,.2); }
+.pull p{ font-family:var(--font-display); font-size:var(--step-3); line-height:1.15; letter-spacing:-.02em; }
+.pull figcaption{ margin-top:var(--space-4); color:rgba(245,240,230,.82); font-size:var(--step--1); }
+.pull figcaption strong{ color:var(--brand-ink); }
+@media (min-width:960px){
+  .proof__grid{ grid-template-columns:5fr 7fr; gap:var(--space-8); align-items:end; }
+}
+.rail-head{ display:flex; align-items:center; justify-content:space-between; gap:var(--space-4); margin-top:var(--space-8); }
+.rail-head p{ font-size:var(--step--1); color:rgba(245,240,230,.82); }
+.rail-nav{ display:none; gap:var(--space-2); }
+@media (min-width:640px){ .rail-nav{ display:flex; } }
+.rail-btn{ width:48px; height:48px; border-radius:50%; display:grid; place-items:center; border:1.5px solid rgba(245,240,230,.45); background:transparent; color:var(--brand-ink); cursor:pointer; transition:transform .3s var(--ease), opacity .3s var(--ease); }
+.rail-btn:hover{ transform:scale(1.06); }
+.rail-btn[disabled]{ opacity:.35; cursor:default; transform:none; }
+.rail{
+  display:grid; grid-auto-flow:column; grid-auto-columns:min(84%, 380px); gap:var(--space-4);
+  overflow-x:auto; scroll-snap-type:x mandatory; overscroll-behavior-x:contain; scrollbar-width:none;
+  margin:var(--space-5) calc(-1 * var(--gutter)) 0; padding:4px var(--gutter) var(--space-3); scroll-padding-inline:var(--gutter);
+}
+.rail::-webkit-scrollbar{ display:none; }
+.review{ scroll-snap-align:start; display:flex; flex-direction:column; gap:var(--space-4); padding:var(--space-5); border-radius:var(--r-md); background:var(--surface); color:var(--ink); box-shadow:var(--shadow-2); }
+.review__stars{ display:flex; gap:2px; color:var(--accent); }
+.review__stars .i{ width:17px; height:17px; }
+.review blockquote p{ font-size:1.0625rem; line-height:1.6; }
+.review__meta{ margin-top:auto; padding-top:var(--space-3); border-top:1px solid var(--line); display:flex; justify-content:space-between; gap:var(--space-3); font-size:var(--step--1); color:var(--ink-soft); }
+.review__meta strong{ color:var(--ink); }
+.rail-dots{ display:flex; justify-content:center; gap:6px; margin-top:var(--space-4); }
+.rail-dots span{ width:6px; height:6px; border-radius:50%; background:rgba(245,240,230,.35); transition:transform .3s var(--ease), opacity .3s; }
+.rail-dots span.is-on{ background:var(--peach); transform:scale(1.35); }
+@media (min-width:960px){ .rail-dots{ display:none; } }
+
+/* Features (le séjour) */
+.features{ display:grid; gap:var(--space-8); margin-top:var(--space-7); }
+.feature{ display:grid; gap:var(--space-5); align-items:center; }
+.feature__media{ position:relative; border-radius:var(--r-lg); overflow:hidden; aspect-ratio:1; box-shadow:var(--shadow-2); background:var(--line); }
+.feature__media img{ width:100%; height:100%; object-fit:cover; }
+.feature--wide .feature__media{ aspect-ratio:4/3; }
+.feature__num{ display:block; font-family:var(--font-display); font-style:italic; font-weight:500; font-size:var(--step-3); color:var(--accent-deep); line-height:1; }
+.feature h3{ font-size:var(--step-3); margin-top:var(--space-3); }
+.feature__body > p{ margin-top:var(--space-4); color:var(--ink-soft); max-width:46ch; }
+.micro{ margin-top:var(--space-5); padding-left:var(--space-4); border-left:3px solid var(--accent); max-width:42ch; }
+.micro p{ font-family:var(--font-display); font-style:italic; font-weight:500; font-size:var(--step-1); line-height:1.35; color:var(--ink); }
+.micro cite{ display:block; margin-top:var(--space-2); font-style:normal; font-size:var(--step--1); color:var(--ink-soft); }
+@media (min-width:640px){ .feature__media{ aspect-ratio:5/4; } }
+@media (min-width:960px){
+  .features{ gap:var(--space-9); }
+  .feature{ grid-template-columns:repeat(12, 1fr); gap:var(--space-6); }
+  .feature__media{ grid-column:1 / span 6; aspect-ratio:4/5; }
+  .feature__body{ grid-column:8 / span 5; }
+  .feature--rev .feature__media{ grid-column:7 / span 5; order:2; aspect-ratio:4/5; }
+  .feature--rev .feature__body{ grid-column:2 / span 5; order:1; }
+  .feature--wide .feature__media{ grid-column:1 / span 7; aspect-ratio:4/3; }
+  .feature--wide .feature__body{ grid-column:9 / span 4; }
+}
+
+/* Services */
+.services{ background:var(--surface); border-block:1px solid var(--line); }
+.services__grid{ display:grid; gap:var(--space-7); }
+.svc-list{ border-top:1px solid var(--line); counter-reset:svc; }
+.svc{ display:grid; grid-template-columns:2.25rem 1fr; column-gap:var(--space-4); padding-block:var(--space-5); border-bottom:1px solid var(--line); }
+.svc::before{ counter-increment:svc; content:"0" counter(svc); grid-row:span 2; font-family:var(--font-display); font-style:italic; font-weight:500; font-size:var(--step-1); color:var(--accent-deep); padding-top:2px; }
+.svc h3{ font-size:var(--step-2); }
+.svc p{ margin-top:var(--space-2); color:var(--ink-soft); max-width:52ch; }
+.onsite{ margin-top:var(--space-6); display:grid; gap:var(--space-3); }
+.onsite li{ display:flex; align-items:center; gap:var(--space-3); }
+.onsite .i{ color:var(--brand); }
+.services__note{ margin-top:var(--space-6); display:flex; flex-wrap:wrap; gap:var(--space-3); }
+@media (min-width:960px){
+  .services__grid{ grid-template-columns:5fr 7fr; gap:var(--space-8); }
+  .services__intro{ position:sticky; top:calc(var(--header) + 32px); align-self:start; }
+}
+
+/* Gallery */
+.gallery{ display:grid; grid-template-columns:repeat(2, 1fr); grid-auto-rows:clamp(150px, 40vw, 230px); gap:var(--space-2); margin-top:var(--space-7); }
+.g-item{ position:relative; padding:0; margin:0; border:0; border-radius:var(--r-md); overflow:hidden; cursor:zoom-in; background:var(--line); }
+.g-item img{ width:100%; height:100%; object-fit:cover; transition:transform .7s var(--ease); }
+.g-item:hover img{ transform:scale(1.04); }
+.g-item::after{ content:""; position:absolute; inset:0; border-radius:inherit; box-shadow:inset 0 0 0 1px rgba(24,32,27,.08); pointer-events:none; }
+.g--big{ grid-column:span 2; grid-row:span 2; }
+.g--tall{ grid-row:span 2; }
+.g--wide{ grid-column:span 2; }
+@media (min-width:960px){ .gallery{ grid-template-columns:repeat(4, 1fr); grid-auto-rows:210px; gap:var(--space-3); } }
+
+.lightbox{ border:0; padding:0; background:transparent; width:min(92vw, 980px); max-width:none; max-height:none; overflow:visible; color:var(--brand-ink); }
+.lightbox::backdrop{ background:rgba(12,20,15,.9); }
+.lightbox figure{ display:grid; gap:var(--space-3); }
+.lightbox img{ width:auto; max-width:100%; max-height:76dvh; margin-inline:auto; border-radius:var(--r-md); object-fit:contain; }
+.lb-bar{ display:flex; align-items:center; gap:var(--space-2); }
+.lb-bar figcaption{ margin-right:auto; font-size:var(--step--1); color:rgba(245,240,230,.85); }
+.lb-btn{ width:48px; height:48px; flex:none; border-radius:50%; display:grid; place-items:center; border:1.5px solid rgba(245,240,230,.4); background:rgba(245,240,230,.06); color:var(--brand-ink); cursor:pointer; }
+.lb-btn:hover{ background:rgba(245,240,230,.14); }
+
+/* Steps */
+.booking{ background:var(--tint); }
+.steps{ display:grid; gap:var(--space-7); margin-top:var(--space-8); }
+.step{ position:relative; padding-top:var(--space-6); border-top:2px dashed rgba(30,58,43,.35); }
+.step__n{ position:absolute; top:-23px; left:0; width:44px; height:44px; border-radius:50%; display:grid; place-items:center; background:var(--brand); color:var(--brand-ink); font-family:var(--font-display); font-weight:600; font-size:1.125rem; box-shadow:0 0 0 6px var(--tint); }
+.step h3{ font-size:var(--step-2); }
+.step p{ margin-top:var(--space-3); color:var(--ink-soft); max-width:40ch; }
+.booking__cta{ display:flex; flex-wrap:wrap; gap:var(--space-3); margin-top:var(--space-7); }
+@media (min-width:960px){ .steps{ grid-template-columns:repeat(3, 1fr); gap:var(--space-6); } }
+
+/* Access */
+.access__grid{ display:grid; gap:var(--space-7); margin-top:var(--space-7); }
+.addr{ font-style:normal; font-family:var(--font-display); font-size:var(--step-2); line-height:1.2; }
+.access__btns{ display:flex; flex-wrap:wrap; gap:var(--space-3); margin-top:var(--space-5); }
+.access .onsite{ margin-top:var(--space-5); color:var(--ink-soft); }
+.hours{ margin-top:var(--space-6); padding:var(--space-5); border-radius:var(--r-md); background:var(--surface); border:1px solid var(--line); box-shadow:var(--shadow-1); }
+.hours__head{ display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:var(--space-2) var(--space-4); }
+.hours__head h3{ font-size:var(--step-2); }
+.hours table{ width:100%; border-collapse:collapse; margin-top:var(--space-4); }
+.hours th,.hours td{ padding:11px 0; border-bottom:1px solid var(--line); text-align:left; font-weight:400; }
+.hours td{ text-align:right; font-variant-numeric:tabular-nums; }
+.hours tr:last-child th,.hours tr:last-child td{ border-bottom:0; }
+.hours tr.is-today th,.hours tr.is-today td{ font-weight:600; }
+.hours tr.is-today th::after{ content:"Aujourd’hui"; margin-left:10px; padding:2px 8px; border-radius:var(--r-pill); background:var(--tint); color:var(--brand); font-size:.8125rem; font-weight:600; vertical-align:2px; }
+.hours__note{ margin-top:var(--space-4); font-size:var(--step--1); color:var(--ink-soft); }
+.map{ position:relative; min-height:320px; aspect-ratio:4/5; border-radius:var(--r-lg); overflow:hidden; background:var(--tint); box-shadow:var(--shadow-2); }
+.map iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
+.map__fallback{ position:absolute; inset:0; display:grid; place-items:center; text-align:center; padding:var(--space-5); color:var(--brand); font-weight:600; }
+.map-link{ display:inline-flex; align-items:center; gap:8px; min-height:44px; margin-top:var(--space-3); font-weight:600; color:var(--brand); text-underline-offset:4px; }
+@media (min-width:640px){ .map{ aspect-ratio:4/3; } }
+@media (min-width:960px){
+  .access__grid{ grid-template-columns:5fr 7fr; gap:var(--space-8); }
+  .map{ aspect-ratio:auto; height:calc(100% - 56px); min-height:520px; }
+}
+
+/* Contact band */
+.contact{ background:var(--accent); color:var(--ink); padding-block:var(--section); position:relative; overflow:clip; }
+.contact .eyebrow{ color:var(--ink); }
+.contact__grid{ display:grid; gap:var(--space-6); align-items:end; }
+.contact h2{ font-size:var(--step-4); margin-top:var(--space-3); max-width:14ch; }
+.big-phone{ display:inline-block; margin-top:var(--space-5); font-family:var(--font-display); font-weight:600; font-size:clamp(2rem, .5rem + 8vw, 5.5rem); letter-spacing:-.035em; line-height:1; white-space:nowrap; text-decoration:none; border-bottom:3px solid currentColor; padding-bottom:6px; }
+.contact p{ margin-top:var(--space-5); max-width:44ch; }
+.contact__btns{ display:grid; gap:var(--space-3); width:min(100%, 360px); }
+.contact__btns .btn{ width:100%; }
+.contact .btn--ghost{ border-color:var(--ink); }
+.contact .btn--ghost:hover{ background:rgba(24,32,27,.08); }
+.contact__arch{ position:absolute; right:-60px; bottom:-140px; width:340px; height:420px; border:2px solid rgba(24,32,27,.18); border-radius:170px 170px 0 0; pointer-events:none; }
+.contact__arch::after{ content:""; position:absolute; inset:40px 40px -2px; border:2px solid rgba(24,32,27,.12); border-radius:130px 130px 0 0; }
+@media (min-width:960px){ .contact__grid{ grid-template-columns:1.4fr 1fr; } .contact__btns{ justify-self:end; width:min(100%, 320px); } }
+
+/* Footer */
+.footer{ background:var(--forest); color:#D9DFD3; padding-block:var(--space-8) var(--space-6); font-size:var(--step--1); }
+.footer a{ text-decoration:none; }
+.footer a:hover{ text-decoration:underline; text-underline-offset:4px; }
+.footer__grid{ display:grid; gap:var(--space-6); }
+.footer .brand{ color:var(--brand-ink); }
+.footer h2{ font-family:var(--font-body); font-size:.8125rem; font-weight:600; letter-spacing:.09em; text-transform:uppercase; color:var(--peach); margin-bottom:var(--space-2); }
+.footer li a, .footer address{ display:inline-flex; align-items:center; gap:8px; min-height:44px; font-style:normal; }
+.footer address{ display:block; min-height:0; padding-block:10px; line-height:1.5; }
+.footer__legal{ margin-top:var(--space-7); padding-top:var(--space-5); border-top:1px solid rgba(217,223,211,.18); display:flex; flex-wrap:wrap; justify-content:space-between; gap:var(--space-3); color:rgba(217,223,211,.75); }
+@media (min-width:640px){ .footer__grid{ grid-template-columns:1.4fr 1fr 1fr; } }
+
+/* Mobile action bar */
+.actionbar{
+  position:fixed; left:0; right:0; bottom:0; z-index:60; display:grid; grid-template-columns:repeat(3, 1fr); gap:var(--space-2);
+  padding:10px 12px calc(10px + env(safe-area-inset-bottom)); background:rgba(245,240,230,.97); border-top:1px solid var(--line);
+  box-shadow:0 -10px 30px -18px rgba(24,32,27,.45);
+}
+.actionbar a{ display:flex; align-items:center; justify-content:center; gap:8px; min-height:50px; border-radius:var(--r-sm); border:1.5px solid var(--line); background:var(--surface); color:var(--ink); font-weight:600; font-size:1rem; text-decoration:none; }
+.actionbar a.is-primary{ background:var(--brand); border-color:var(--brand); color:var(--brand-ink); }
+.actionbar .i{ width:19px; height:19px; }
+@media (min-width:768px){ .actionbar{ display:none; } }
+
+/* Reveal */
+.js .reveal{ opacity:0; transform:translateY(18px); transition:opacity .7s var(--ease), transform .7s var(--ease); }
+.js .reveal.is-in{ opacity:1; transform:none; }
+.js .reveal.d1{ transition-delay:.08s; } .js .reveal.d2{ transition-delay:.16s; }
+
+@media (prefers-reduced-motion:reduce){
+  html{ scroll-behavior:auto; }
+  *,*::before,*::after{ animation:none!important; transition:none!important; }
+  .js .reveal{ opacity:1; transform:none; }
+}
+</style>
+<script>
+document.documentElement.classList.add('js');
+document.addEventListener('DOMContentLoaded', () => {
+  const d = document, html = d.documentElement;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const hasIO = 'IntersectionObserver' in window;
+
+  const y = d.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+
+  // Header state
+  const header = d.querySelector('.header');
+  const onScroll = () => header.classList.toggle('is-scrolled', scrollY > 8);
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // Mobile menu
+  const btn = d.querySelector('.menu-btn'), nav = d.getElementById('menu');
+  const isOpen = () => btn.getAttribute('aria-expanded') === 'true';
+  const setMenu = (open) => {
+    btn.setAttribute('aria-expanded', String(open));
+    btn.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+    nav.classList.toggle('is-open', open);
+    html.classList.toggle('is-locked', open);
+  };
+  btn.addEventListener('click', () => setMenu(!isOpen()));
+  nav.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
+  d.addEventListener('keydown', (e) => { if (e.key === 'Escape' && isOpen()) { setMenu(false); btn.focus(); } });
+  matchMedia('(min-width: 960px)').addEventListener('change', (e) => { if (e.matches) setMenu(false); });
+
+  // Hours: parse, highlight today, live badge
+  const DAYS = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
+  const rows = [...d.querySelectorAll('[data-day]')];
+  if (rows.length) {
+    const parse = (v) => {
+      v = (v || '').toLowerCase();
+      if (!v || /ferm/.test(v)) return [];
+      if (/24\s*h?\s*(\/|sur)\s*24/.test(v)) return [[0, 1440]];
+      const out = [];
+      v.replace(/(\d{1,2})(?:\s*[:h.]\s*(\d{2})?)?\s*(?:[-–—]|à)\s*(\d{1,2})(?:\s*[:h.]\s*(\d{2})?)?/g, (m, a, b, c, e) => {
+        const s = +a * 60 + (+b || 0); let t = +c * 60 + (+e || 0);
+        if (t <= s) t += 1440;
+        out.push([s, t]);
+      });
+      return out;
+    };
+    const sched = {};
+    rows.forEach((r) => { sched[r.dataset.day] = parse(r.dataset.hours); });
+    const get = (i) => sched[DAYS[((i % 7) + 7) % 7]] || [];
+    const fmt = (m) => { m = ((m % 1440) + 1440) % 1440; const h = Math.floor(m / 60), mm = m % 60; return h + 'h' + (mm ? String(mm).padStart(2, '0') : ''); };
+    const now = new Date(), day = now.getDay(), mins = now.getHours() * 60 + now.getMinutes();
+    rows.forEach((r) => { if (r.dataset.day === DAYS[day]) { r.classList.add('is-today'); r.setAttribute('aria-current', 'date'); } });
+
+    let open = null;
+    get(day).forEach(([s, e]) => { if (mins >= s && mins < e) open = [s, e]; });
+    get(day - 1).forEach(([s, e]) => { if (e > 1440 && mins < e - 1440) open = [s - 1440, e - 1440]; });
+    let text, closed = false;
+    if (open) {
+      const allDay = [0, 1, 2, 3, 4, 5, 6].every((k) => get(k).some(([s, e]) => s === 0 && e >= 1440));
+      if (allDay) text = 'Ouvert maintenant · <small>24h/24, 7j/7</small>';
+      else if (open[0] <= 0 && open[1] >= 1440) text = 'Ouvert maintenant · <small>24h/24 aujourd’hui</small>';
+      else text = 'Ouvert maintenant · <small>ferme à ' + fmt(open[1]) + '</small>';
+    } else {
+      closed = true;
+      let next = null;
+      for (let k = 0; k < 8 && next === null; k++) {
+        get(day + k).forEach(([s]) => { const at = k * 1440 + s; if (at > mins && (next === null || at < next.at)) next = { at, k, s }; });
+      }
+      text = 'Fermé';
+      if (next) text += ' · <small>ouvre ' + (next.k === 0 ? '' : next.k === 1 ? 'demain ' : DAYS[(day + next.k) % 7] + ' ') + 'à ' + fmt(next.s) + '</small>';
+    }
+    d.querySelectorAll('[data-status]').forEach((b) => { b.innerHTML = text; b.classList.toggle('is-closed', closed); });
+  }
+
+  // Scroll reveals
+  const reveals = d.querySelectorAll('.reveal');
+  if (hasIO && !reduce) {
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -6% 0px', threshold: 0.06 });
+    reveals.forEach((el) => io.observe(el));
+  } else reveals.forEach((el) => el.classList.add('is-in'));
+
+  // Count-up
+  if (hasIO && !reduce) d.querySelectorAll('[data-count]').forEach((el) => {
+    const to = +el.dataset.count; el.textContent = '0';
+    const io = new IntersectionObserver(([e]) => {
+      if (!e.isIntersecting) return; io.disconnect();
+      const t0 = performance.now();
+      const tick = (t) => { const p = Math.min(1, (t - t0) / 1400); el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(tick); };
+      requestAnimationFrame(tick);
+    }, { threshold: 0.5 });
+    io.observe(el);
+  });
+
+  // Review rail
+  const rail = d.querySelector('[data-rail]');
+  if (rail) {
+    const cards = [...rail.children], prev = d.querySelector('[data-dir="-1"]'), next = d.querySelector('[data-dir="1"]');
+    const dots = d.querySelector('.rail-dots');
+    cards.forEach(() => dots.appendChild(d.createElement('span')));
+    const update = () => {
+      const max = rail.scrollWidth - rail.clientWidth - 2;
+      prev.disabled = rail.scrollLeft <= 2; next.disabled = rail.scrollLeft >= max;
+      const step = cards[1] ? cards[1].offsetLeft - cards[0].offsetLeft : 1;
+      const i = rail.scrollLeft >= max ? cards.length - 1 : Math.round(rail.scrollLeft / step);
+      [...dots.children].forEach((s, k) => s.classList.toggle('is-on', k === i));
+    };
+    [prev, next].forEach((b) => b.addEventListener('click', () => {
+      const step = cards[1] ? cards[1].offsetLeft - cards[0].offsetLeft : rail.clientWidth;
+      rail.scrollBy({ left: step * +b.dataset.dir, behavior: reduce ? 'auto' : 'smooth' });
+    }));
+    rail.addEventListener('scroll', update, { passive: true }); addEventListener('resize', update); update();
+  }
+
+  // Lightbox
+  const dlg = d.getElementById('lightbox');
+  const items = [...d.querySelectorAll('[data-lightbox]')];
+  if (dlg && items.length && dlg.showModal) {
+    const img = dlg.querySelector('img'), cap = dlg.querySelector('figcaption');
+    let idx = 0;
+    const show = (i) => {
+      idx = (i + items.length) % items.length;
+      const src = items[idx].querySelector('img');
+      img.src = src.getAttribute('src'); img.alt = src.alt;
+      cap.textContent = (idx + 1) + ' / ' + items.length + ' · ' + src.alt;
+    };
+    items.forEach((b, i) => b.addEventListener('click', () => { show(i); dlg.showModal(); html.classList.add('is-locked'); }));
+    dlg.querySelector('[data-lb="prev"]').addEventListener('click', () => show(idx - 1));
+    dlg.querySelector('[data-lb="next"]').addEventListener('click', () => show(idx + 1));
+    dlg.querySelector('[data-lb="close"]').addEventListener('click', () => dlg.close());
+    dlg.addEventListener('keydown', (e) => { if (e.key === 'ArrowRight') show(idx + 1); if (e.key === 'ArrowLeft') show(idx - 1); });
+    dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+    dlg.addEventListener('close', () => { html.classList.remove('is-locked'); items[idx].focus(); });
+  }
+});
+</script>
+<!--sf:preview--><meta name="robots" content="noindex, nofollow"><!--/sf:preview-->
+<!--sf:og--><meta property="og:image" content="https://pension-canine-anim-hotel08-reims.aymenjallouli.dev/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:url" content="https://pension-canine-anim-hotel08-reims.aymenjallouli.dev/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://pension-canine-anim-hotel08-reims.aymenjallouli.dev/og.jpg"><!--/sf:og-->
+</head>
+<body id="top">
+<a class="skip" href="#contenu">Aller au contenu</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.6l2.85 5.95 6.55.85-4.8 4.55 1.2 6.5L12 17.3l-5.8 3.15 1.2-6.5L2.6 9.4l6.55-.85z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M21.5 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1.6 4.2 2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L7.6 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-sms" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><path d="M3 11 22 2l-9 19-2-8z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-prev" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="i-next" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-park" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9.5 17V7H13a3 3 0 0 1 0 6H9.5"/></symbol>
+  <symbol id="i-access" viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="1.8"/><path d="M12 7.5v6h5l2 5M12 10h4.5"/><path d="M9 11.2a5.5 5.5 0 1 0 6.9 7"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="17" rx="3"/><path d="M16 2.5v4M8 2.5v4M3 10h18"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+</svg>
+
+<header class="header">
+  <div class="container header__in">
+    <a class="brand" href="#top" aria-label="Anim’hotel08, retour en haut de page">
+      <svg class="brand__mark" viewBox="0 0 28 34" aria-hidden="true"><path d="M1 34V14a13 13 0 0 1 26 0v20z" fill="#1E3A2B"/><path d="M9 34V20a5 5 0 0 1 10 0v14z" fill="#E0682C"/></svg>
+      <span class="brand__name">anim’hotel<span class="brand__num">08</span></span>
+    </a>
+    <nav id="menu" class="nav" aria-label="Navigation principale">
+      <ul>
+        <li><a href="#avis">Avis <svg class="i" aria-hidden="true"><use href="#i-right"/></svg></a></li>
+        <li><a href="#sejour">Le séjour <svg class="i" aria-hidden="true"><use href="#i-right"/></svg></a></li>
+        <li><a href="#services">Services <svg class="i" aria-hidden="true"><use href="#i-right"/></svg></a></li>
+        <li><a href="#photos">Photos <svg class="i" aria-hidden="true"><use href="#i-right"/></svg></a></li>
+        <li><a href="#acces">Accès &amp; horaires <svg class="i" aria-hidden="true"><use href="#i-right"/></svg></a></li>
+      </ul>
+      <div class="nav__foot">
+        <a class="btn btn--primary" href="tel:+33671478699"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>06 71 47 86 99</a>
+        <a class="btn btn--ghost" href="sms:+33671478699?&amp;body=Bonjour%20Lo%C3%AFc%2C%20je%20souhaiterais%20faire%20garder%20mon%20chien%20%C3%A0%20la%20pension%20anim%E2%80%99hotel08.%20Mes%20dates%20%3A%20"><svg class="i" aria-hidden="true"><use href="#i-sms"/></svg>Envoyer un SMS</a>
+      </div>
+    </nav>
+    <a class="btn btn--primary header__cta" href="tel:+33671478699"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>06 71 47 86 99</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
+      <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+</header>
+
+<main id="contenu">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero__grid">
+      <div class="hero__text">
+        <p class="eyebrow eyebrow--hero"><span>Pension canine</span> <span>· Charleville-Mézières</span></p>
+        <h1 id="hero-title">Chez Loïc, votre chien a de la place pour <em>vagabonder<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 13 C 30 4, 52 4, 74 11 S 120 18, 146 9 S 186 5, 197 10"/></svg></em>.</h1>
+        <p class="lead">Un grand terrain route d’Aiglemont, des logements chauffés pour l’hiver, et des photos de lui pendant votre absence.</p>
+        <div class="hero__proof">
+          <a class="chip" href="https://www.google.com/maps/place/?q=place_id:ChIJxSlikjsN6kcRbVH4ZlEILJU" target="_blank" rel="noopener" aria-label="Note 5,0 sur 5, 81 avis Google (ouvre Google Maps)">
+            <span class="chip__stars" aria-hidden="true"><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg></span>
+            <span>5,0 <span class="sep">·</span> 81 avis Google</span>
+          </a>
+          <span class="badge" data-status>Ouvert 24h/24 · <small>7j/7</small></span>
+        </div>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="tel:+33671478699"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Appeler Loïc</a>
+          <a class="btn btn--ghost" href="sms:+33671478699?&amp;body=Bonjour%20Lo%C3%AFc%2C%20je%20souhaiterais%20faire%20garder%20mon%20chien%20%C3%A0%20la%20pension%20anim%E2%80%99hotel08.%20Mes%20dates%20%3A%20"><svg class="i" aria-hidden="true"><use href="#i-sms"/></svg><span class="short">SMS</span><span class="long">Envoyer un SMS</span></a>
+        </div>
+      </div>
+      <div class="hero__media">
+        <figure class="arch">
+          <img src="assets/photos/photo-01.jpg" width="1200" height="1600" fetchpriority="high" alt="Braque de Weimar debout dans l’herbe au soleil, devant de grands conifères">
+        </figure>
+        <figure class="hero__inset">
+          <img src="assets/photos/photo-06.jpg" width="1600" height="1600" loading="lazy" decoding="async" alt="Deux bouledogues français, langue tirée, assis côte à côte">
+        </figure>
+        <p class="hero__tag"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Route d’Aiglemont</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF -->
+  <section id="avis" class="proof" aria-labelledby="avis-title">
+    <div class="container">
+      <div class="proof__grid">
+        <div class="score reveal">
+          <p class="eyebrow">Avis Google</p>
+          <p class="score__num" aria-label="Note moyenne : 5,0 sur 5">5,0<sup aria-hidden="true">/5</sup></p>
+          <div class="score__stars" aria-hidden="true"><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg></div>
+          <p class="score__count">sur <strong data-count="81">81</strong> avis laissés sur Google</p>
+          <a class="link-arrow" href="https://www.google.com/maps/place/?q=place_id:ChIJxSlikjsN6kcRbVH4ZlEILJU" target="_blank" rel="noopener">Voir les 81 avis sur Google <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="reveal d1">
+          <h2 id="avis-title">«&nbsp;En toute confiance&nbsp;»</h2>
+          <p class="proof__intro">L’expression revient souvent dans les avis des propriétaires. Extraits, mot pour mot.</p>
+          <figure class="pull">
+            <blockquote><p>«&nbsp;…j’ai retrouvé mes chiens heureux comme si je n’étais pas parti…&nbsp;»</p></blockquote>
+            <figcaption><strong>nicolas K.</strong> · avril 2026 · 5 étoiles</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="rail-head">
+        <p>D’autres avis, mot pour mot</p>
+        <div class="rail-nav">
+          <button class="rail-btn" type="button" data-dir="-1" aria-label="Avis précédent"><svg class="i" aria-hidden="true"><use href="#i-prev"/></svg></button>
+          <button class="rail-btn" type="button" data-dir="1" aria-label="Avis suivant"><svg class="i" aria-hidden="true"><use href="#i-next"/></svg></button>
+        </div>
+      </div>
+      <ul class="rail" data-rail aria-label="Avis Google des clients" tabindex="0">
+        <li class="review">
+          <div class="review__stars" role="img" aria-label="5 étoiles sur 5"><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg></div>
+          <blockquote><p>Pension parfaite, les chiens ont de la place pour vagabonder et même des logements chauffés pour l’hiver le propriétaire est super sympa, la prise de contact est très rapide et efficace et il envoie des photos si vous lui demandez…</p></blockquote>
+          <p class="review__meta"><strong>Lucas B.</strong><span>août 2026</span></p>
+        </li>
+        <li class="review">
+          <div class="review__stars" role="img" aria-label="5 étoiles sur 5"><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg></div>
+          <blockquote><p>Nous sommes ravis d'avoir trouvé la pension idéale pour garder nos deux gros toutous… Professionnel et a l'écoute,flexible sur les dates ,locaux et grand terrain que demander de mieux…</p></blockquote>
+          <p class="review__meta"><strong>Marie B.</strong><span>août 2026</span></p>
+        </li>
+        <li class="review">
+          <div class="review__stars" role="img" aria-label="5 étoiles sur 5"><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg></div>
+          <blockquote><p>Une personne adorable, disponible et arrangeante, qui prend soin des chiens avec beaucoup d’attention et de bienveillance. … Nous avons laissé notre chien en toute confiance et nous le referons sans hésiter…</p></blockquote>
+          <p class="review__meta"><strong>Elodie V.</strong><span>juin 2026</span></p>
+        </li>
+        <li class="review">
+          <div class="review__stars" role="img" aria-label="5 étoiles sur 5"><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg></div>
+          <blockquote><p>Excellent accueil et excellent rapport avec les chiens. Installations propres et bien pensées. Nous recommandons la pension de Loic où nous laisserons à nouveau notre chien en toute confiance.</p></blockquote>
+          <p class="review__meta"><strong>Veronique G.</strong><span>mai 2026</span></p>
+        </li>
+        <li class="review">
+          <div class="review__stars" role="img" aria-label="5 étoiles sur 5"><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg></div>
+          <blockquote><p>Très belle expérience avec la pension canine de Loïc. L’accueil est sérieux et bienveillant, et tout s’est déroulé parfaitement pendant le séjour de notre chien Marty .Nous l’avons récupéré en pleine forme, ce qui est la meilleure preuve qu’il s’y est senti bien…</p></blockquote>
+          <p class="review__meta"><strong>Angélique C.</strong><span>février 2026</span></p>
+        </li>
+        <li class="review">
+          <div class="review__stars" role="img" aria-label="5 étoiles sur 5"><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg></div>
+          <blockquote><p>Très bonne pension pour y faire garder ses chiens, endroit très propre et personnel fort sympathique, je recommande…</p></blockquote>
+          <p class="review__meta"><strong>Benjamin D.</strong><span>février 2026</span></p>
+        </li>
+      </ul>
+      <div class="rail-dots" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- LE SÉJOUR -->
+  <section id="sejour" class="section" aria-labelledby="sejour-title">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow">Le séjour</p>
+        <h2 id="sejour-title">Ce qui revient dans les avis.</h2>
+        <p>Trois choses que les propriétaires citent quand ils racontent le séjour de leur chien chez Loïc.</p>
+      </header>
+
+      <div class="features">
+        <article class="feature">
+          <figure class="feature__media reveal">
+            <img src="assets/photos/photo-12.jpg" width="1200" height="1600" loading="lazy" decoding="async" style="object-position:50% 58%" alt="Berger belge tervueren sur un grand terrain en herbe, clôturé et bordé d’arbres">
+          </figure>
+          <div class="feature__body reveal d1">
+            <span class="feature__num" aria-hidden="true">01</span>
+            <h3>De la place pour vagabonder</h3>
+            <p>Un grand terrain en herbe, clôturé, où les chiens courent, jouent et se reposent. Les clients décrivent un endroit «&nbsp;vraiment calme&nbsp;».</p>
+            <blockquote class="micro"><p>«&nbsp;…locaux et grand terrain que demander de mieux…&nbsp;»</p><cite>Marie B., avis Google</cite></blockquote>
+          </div>
+        </article>
+
+        <article class="feature feature--rev">
+          <figure class="feature__media reveal">
+            <img src="assets/photos/photo-05.jpg" width="787" height="1280" loading="lazy" decoding="async" style="object-position:50% 62%" alt="Rottweiler assis sur le gravier, la pelouse et les enclos en arrière-plan">
+          </figure>
+          <div class="feature__body reveal d1">
+            <span class="feature__num" aria-hidden="true">02</span>
+            <h3>Chauffé l’hiver, propre toute l’année</h3>
+            <p>Quand le froid arrive sur les Ardennes, les chiens ont des logements chauffés. Les avis parlent de locaux «&nbsp;propres et adaptés&nbsp;».</p>
+            <blockquote class="micro"><p>«&nbsp;Installations propres et bien pensées.&nbsp;»</p><cite>Veronique G., avis Google</cite></blockquote>
+          </div>
+        </article>
+
+        <article class="feature feature--wide">
+          <figure class="feature__media reveal">
+            <img src="assets/photos/photo-07.jpg" width="1600" height="1200" loading="lazy" decoding="async" style="object-position:45% 50%" alt="Beagle couché sur le dos qui se fait gratter le ventre">
+          </figure>
+          <div class="feature__body reveal d1">
+            <span class="feature__num" aria-hidden="true">03</span>
+            <h3>Des nouvelles pendant votre absence</h3>
+            <p>Loïc envoie des photos et des vidéos pendant le séjour, et répond vite quand vous lui écrivez.</p>
+            <blockquote class="micro"><p>«&nbsp;Nous avons reçu régulièrement des photos et des vidéos, ce qui est vraiment rassurant lorsque l’on est absent.&nbsp;»</p><cite>Elodie V., avis Google</cite></blockquote>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section services" aria-labelledby="services-title">
+    <div class="container services__grid">
+      <div class="services__intro section-head reveal">
+        <p class="eyebrow">La pension</p>
+        <h2 id="services-title">Chiens et chats, le temps de vos vacances.</h2>
+        <p>Une pension tenue par Loïc Remire, au 17 route d’Aiglemont. Pour les tarifs et les disponibilités, le plus simple est de l’appeler.</p>
+        <div class="services__note">
+          <a class="btn btn--primary" href="tel:+33671478699"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>06 71 47 86 99</a>
+        </div>
+      </div>
+      <div>
+        <ul class="svc-list">
+          <li class="svc reveal">
+            <h3>Pension pour chiens et chats</h3>
+            <p>Pension canine et féline&nbsp;: vos chiens comme vos chats peuvent y séjourner.</p>
+          </li>
+          <li class="svc reveal">
+            <h3>Garde de chien pendant les vacances</h3>
+            <p>Pour les vacances comme pour un week-end. Une cliente le décrit «&nbsp;flexible sur les dates&nbsp;».</p>
+          </li>
+          <li class="svc reveal">
+            <h3>Pension canine familiale</h3>
+            <p>C’est Loïc qui vous accueille et qui s’occupe des chiens. Un accueil «&nbsp;sérieux et bienveillant&nbsp;», écrit une cliente.</p>
+          </li>
+          <li class="svc reveal">
+            <h3>Pension canine de luxe</h3>
+            <p>Grand terrain, logements chauffés pour l’hiver, installations pensées pour les chiens.</p>
+          </li>
+        </ul>
+        <ul class="onsite reveal" aria-label="Sur place">
+          <li><svg class="i" aria-hidden="true"><use href="#i-cal"/></svg>Accueil sur rendez-vous, 7 jours sur 7</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-park"/></svg>Parking gratuit sur place</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-access"/></svg>Parking accessible en fauteuil roulant</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTOS -->
+  <section id="photos" class="section" aria-labelledby="photos-title">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow">Photos</p>
+        <h2 id="photos-title">Quelques pensionnaires.</h2>
+        <p>Braques, bergers, beagle, chiots ou «&nbsp;gros toutous&nbsp;» : tous les gabarits passent par la route d’Aiglemont.</p>
+      </header>
+      <div class="gallery">
+        <button class="g-item g--big reveal" type="button" data-lightbox aria-label="Agrandir : braque de Weimar avec sa balle">
+          <img src="assets/photos/photo-14.jpg" width="1289" height="1600" loading="lazy" decoding="async" style="object-position:50% 35%" alt="Braque de Weimar assis dans l’herbe, une balle orange dans la gueule">
+        </button>
+        <button class="g-item g--tall reveal d1" type="button" data-lightbox aria-label="Agrandir : chien nordique qui sourit">
+          <img src="assets/photos/photo-04.jpg" width="1200" height="1600" loading="lazy" decoding="async" style="object-position:55% 55%" alt="Chien nordique gris et blanc qui sourit, une patte posée sur le bras qui le caresse">
+        </button>
+        <button class="g-item g--tall reveal d2" type="button" data-lightbox aria-label="Agrandir : berger belge malinois">
+          <img src="assets/photos/photo-03.jpg" width="1226" height="1600" loading="lazy" decoding="async" style="object-position:55% 45%" alt="Berger belge malinois en harnais sur un chemin de terre, au soleil">
+        </button>
+        <button class="g-item reveal" type="button" data-lightbox aria-label="Agrandir : chiot dans l’herbe">
+          <img src="assets/photos/photo-09.jpg" width="902" height="1600" loading="lazy" decoding="async" style="object-position:50% 52%" alt="Chiot noir et feu couché dans l’herbe avec son jouet">
+        </button>
+        <button class="g-item reveal d1" type="button" data-lightbox aria-label="Agrandir : chien blanc dans l’herbe">
+          <img src="assets/photos/photo-02.jpg" width="900" height="1600" loading="lazy" decoding="async" style="object-position:50% 45%" alt="Chien blanc qui s’avance dans l’herbe parsemée de boutons d’or">
+        </button>
+        <button class="g-item g--wide reveal d2" type="button" data-lightbox aria-label="Agrandir : grand chien allongé dans le jardin">
+          <img src="assets/photos/photo-10.jpg" width="901" height="1600" loading="lazy" decoding="async" style="object-position:50% 54%" alt="Grand chien blanc et fauve allongé dans le jardin, entouré de ses jouets">
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- RÉSERVER -->
+  <section id="reserver" class="section booking" aria-labelledby="reserver-title">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow">Réserver</p>
+        <h2 id="reserver-title">Comment ça se passe.</h2>
+      </header>
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step__n" aria-hidden="true">1</span>
+          <h3>Vous appelez ou écrivez</h3>
+          <p>Donnez vos dates et présentez votre chien. La prise de contact est «&nbsp;très rapide et efficace&nbsp;», d’après un client.</p>
+        </li>
+        <li class="step reveal d1">
+          <span class="step__n" aria-hidden="true">2</span>
+          <h3>Vous venez sur rendez-vous</h3>
+          <p>L’accueil se fait sur rendez-vous, 7 jours sur 7, au 17 route d’Aiglemont. Parking gratuit sur place.</p>
+        </li>
+        <li class="step reveal d2">
+          <span class="step__n" aria-hidden="true">3</span>
+          <h3>Vous partez tranquille</h3>
+          <p>Demandez des photos pendant le séjour. Au retour, un chien «&nbsp;heureux et détendu&nbsp;», comme l’écrit une cliente.</p>
+        </li>
+      </ol>
+      <div class="booking__cta reveal">
+        <a class="btn btn--primary" href="tel:+33671478699"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Appeler le 06 71 47 86 99</a>
+        <a class="btn btn--ghost" href="sms:+33671478699?&amp;body=Bonjour%20Lo%C3%AFc%2C%20je%20souhaiterais%20faire%20garder%20mon%20chien%20%C3%A0%20la%20pension%20anim%E2%80%99hotel08.%20Mes%20dates%20%3A%20"><svg class="i" aria-hidden="true"><use href="#i-sms"/></svg>Envoyer un SMS</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCÈS & HORAIRES -->
+  <section id="acces" class="section access" aria-labelledby="acces-title">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow">Accès &amp; horaires</p>
+        <h2 id="acces-title">Venir déposer votre chien.</h2>
+      </header>
+      <div class="access__grid">
+        <div class="reveal">
+          <address class="addr">17 Rte d’Aiglemont<br>08000 Charleville-Mézières</address>
+          <div class="access__btns">
+            <a class="btn btn--primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=Pension%20canine%20anim'hotel08%2C%2017%20Rte%20d'Aiglemont%2C%2008000%20Charleville-M%C3%A9zi%C3%A8res" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-route"/></svg>Itinéraire</a>
+            <a class="btn btn--ghost" href="tel:+33671478699"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Appeler</a>
+          </div>
+          <ul class="onsite">
+            <li><svg class="i" aria-hidden="true"><use href="#i-park"/></svg>Parking gratuit sur place</li>
+            <li><svg class="i" aria-hidden="true"><use href="#i-access"/></svg>Parking accessible en fauteuil roulant</li>
+          </ul>
+
+          <div class="hours">
+            <div class="hours__head">
+              <h3>Horaires</h3>
+              <span class="badge" data-status>Ouvert 24h/24 · <small>7j/7</small></span>
+            </div>
+            <table>
+              <caption class="visually-hidden">Horaires d’ouverture de la pension</caption>
+              <tbody>
+                <tr data-day="lundi" data-hours="Ouvert 24h/24"><th scope="row">Lundi</th><td>Ouvert 24h/24</td></tr>
+                <tr data-day="mardi" data-hours="Ouvert 24h/24"><th scope="row">Mardi</th><td>Ouvert 24h/24</td></tr>
+                <tr data-day="mercredi" data-hours="Ouvert 24h/24"><th scope="row">Mercredi</th><td>Ouvert 24h/24</td></tr>
+                <tr data-day="jeudi" data-hours="Ouvert 24h/24"><th scope="row">Jeudi</th><td>Ouvert 24h/24</td></tr>
+                <tr data-day="vendredi" data-hours="Ouvert 24h/24"><th scope="row">Vendredi</th><td>Ouvert 24h/24</td></tr>
+                <tr data-day="samedi" data-hours="Ouvert 24h/24"><th scope="row">Samedi</th><td>Ouvert 24h/24</td></tr>
+                <tr data-day="dimanche" data-hours="Ouvert 24h/24"><th scope="row">Dimanche</th><td>Ouvert 24h/24</td></tr>
+              </tbody>
+            </table>
+            <p class="hours__note">Accueil sur rendez-vous&nbsp;: appelez avant de venir déposer ou chercher votre chien.</p>
+          </div>
+        </div>
+        <div class="reveal d1">
+          <div class="map">
+            <a class="map__fallback" href="https://www.google.com/maps/place/?q=place_id:ChIJxSlikjsN6kcRbVH4ZlEILJU" target="_blank" rel="noopener">Voir la pension sur Google Maps</a>
+            <iframe src="https://www.google.com/maps?q=Pension%20canine%20anim'hotel08%2C%2017%20Rte%20d'Aiglemont%2C%2008000%20Charleville-M%C3%A9zi%C3%A8res&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen title="Carte : Pension canine anim’hotel08, 17 route d’Aiglemont, Charleville-Mézières"></iframe>
+          </div>
+          <a class="map-link" href="https://www.google.com/maps/place/?q=place_id:ChIJxSlikjsN6kcRbVH4ZlEILJU" target="_blank" rel="noopener">Ouvrir dans Google Maps <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact" aria-labelledby="contact-title">
+    <div class="contact__arch" aria-hidden="true"></div>
+    <div class="container contact__grid">
+      <div class="reveal">
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-title">Donnez vos dates à Loïc.</h2>
+        <a class="big-phone" href="tel:+33671478699" aria-label="Appeler le 06 71 47 86 99">06 71 47 86 99</a>
+        <p>Par téléphone ou par SMS. Accueil sur rendez-vous, 7 jours sur 7.</p>
+      </div>
+      <div class="contact__btns reveal d1">
+        <a class="btn btn--ink" href="tel:+33671478699"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Appeler</a>
+        <a class="btn btn--ghost" href="sms:+33671478699?&amp;body=Bonjour%20Lo%C3%AFc%2C%20je%20souhaiterais%20faire%20garder%20mon%20chien%20%C3%A0%20la%20pension%20anim%E2%80%99hotel08.%20Mes%20dates%20%3A%20"><svg class="i" aria-hidden="true"><use href="#i-sms"/></svg>Envoyer un SMS</a>
+        <a class="btn btn--ghost" href="https://www.facebook.com/profile.php?id=61588018622371" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-fb"/></svg>Facebook</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a class="brand" href="#top" aria-label="Anim’hotel08, retour en haut de page">
+          <svg class="brand__mark" viewBox="0 0 28 34" aria-hidden="true"><path d="M1 34V14a13 13 0 0 1 26 0v20z" fill="#F5F0E6"/><path d="M9 34V20a5 5 0 0 1 10 0v14z" fill="#E0682C"/></svg>
+          <span class="brand__name">anim’hotel<span class="brand__num">08</span></span>
+        </a>
+        <p style="margin-top:var(--space-3);max-width:34ch">Pension canine et féline à Charleville-Mézières. Ouvert 24h/24, 7j/7, accueil sur rendez-vous.</p>
+      </div>
+      <div>
+        <h2>Adresse</h2>
+        <address>17 Rte d’Aiglemont<br>08000 Charleville-Mézières</address>
+        <ul><li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Pension%20canine%20anim'hotel08%2C%2017%20Rte%20d'Aiglemont%2C%2008000%20Charleville-M%C3%A9zi%C3%A8res" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-route"/></svg>Itinéraire</a></li></ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="tel:+33671478699"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>06 71 47 86 99</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61588018622371" target="_blank" rel="noopener" aria-label="Facebook de la pension anim’hotel08"><svg class="i" aria-hidden="true"><use href="#i-fb"/></svg>Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <p>Loïc Remire, entreprise individuelle · SIREN&nbsp;932&nbsp;360&nbsp;480</p>
+      <p>© <span id="year"></span> Pension canine anim’hotel08</p>
+    </div>
+  </div>
+</footer>
+
+<nav class="actionbar" aria-label="Actions rapides">
+  <a class="is-primary" href="tel:+33671478699"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Appeler</a>
+  <a href="sms:+33671478699?&amp;body=Bonjour%20Lo%C3%AFc%2C%20je%20souhaiterais%20faire%20garder%20mon%20chien%20%C3%A0%20la%20pension%20anim%E2%80%99hotel08.%20Mes%20dates%20%3A%20"><svg class="i" aria-hidden="true"><use href="#i-sms"/></svg>SMS</a>
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Pension%20canine%20anim'hotel08%2C%2017%20Rte%20d'Aiglemont%2C%2008000%20Charleville-M%C3%A9zi%C3%A8res" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-route"/></svg>Itinéraire</a>
+</nav>
+
+<dialog id="lightbox" class="lightbox" aria-label="Photo agrandie">
+  <figure>
+    <img src="assets/photos/photo-14.jpg" width="1289" height="1600" loading="lazy" decoding="async" alt="">
+    <div class="lb-bar">
+      <figcaption></figcaption>
+      <button class="lb-btn" type="button" data-lb="prev" aria-label="Photo précédente"><svg class="i" aria-hidden="true"><use href="#i-prev"/></svg></button>
+      <button class="lb-btn" type="button" data-lb="next" aria-label="Photo suivante"><svg class="i" aria-hidden="true"><use href="#i-next"/></svg></button>
+      <button class="lb-btn" type="button" data-lb="close" aria-label="Fermer"><svg class="i" aria-hidden="true"><use href="#i-close"/></svg></button>
+    </div>
+  </figure>
+</dialog>
+<!--sf:preview--><div style="padding:18px 16px;font:13px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;text-align:center;background:#0f0f10;color:#a3a3a8">Aperçu réalisé par Aymen Jallouli pour Pension canine anim'hotel08 : ce site n'est pas encore le site officiel de l'établissement.</div><!--/sf:preview-->
+<!--sf:track--><script>(function(){try{var q=new URLSearchParams(location.search),r=q.get('r')||sessionStorage.getItem('sf_r');if(!r)return;sessionStorage.setItem('sf_r',r);navigator.sendBeacon("https://track.aymenjallouli.dev/t"+'?r='+encodeURIComponent(r)+'&p='+encodeURIComponent(location.pathname));}catch(e){}})();</script><!--/sf:track-->
+</body>
+</html>
